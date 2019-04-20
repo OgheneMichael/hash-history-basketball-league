@@ -4,6 +4,7 @@ import Home from "./Home";
 import Players from "./Players";
 import Teams from "./Teams";
 import Navbar from "./Navbar";
+import TeamPage from "./TeamPage";
 
 class App extends Component {
 	render() {
@@ -15,7 +16,10 @@ class App extends Component {
 						<Route path="/" exact component={Home} />
 						<Route path="/players" component={Players} />
 						<Route path="/teams" component={Teams} />
-						<Route render={() => <h1 className="text-center">404</h1>} />
+						<Route path="/:teamId" component={TeamPage} />
+						<Route
+							render={() => <h1 className="text-center">Four Oh Four</h1>}
+						/>
 					</Switch>
 				</div>
 			</Router>
